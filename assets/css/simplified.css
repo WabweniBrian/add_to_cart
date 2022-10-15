@@ -1,0 +1,2758 @@
+/* ------------------Remove the default padding and padding on all the elements------------ */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Nunito Sans", sans-serif;
+  color: #484848;
+}
+
+:root {
+  /* Colors */
+  --primary-color: #6427ff;
+  --secondary-color: #7981b4;
+  --warning-color: #c49c1a;
+  --success-color: #388b84;
+  --danger-color: #fd4332;
+
+  --primary-color-soft: rgba(100, 39, 255, 0.2);
+  --secondary-color-soft: rgba(121, 129, 180, 0.2);
+  --warning-color-soft: rgba(196, 156, 26, 0.2);
+  --success-color-soft: rgba(56, 139, 132, 0.2);
+  --danger-color-soft: rgba(253, 67, 50, 0.2);
+
+  /* -------Gradient--------------- */
+  --primary-gradient: linear-gradient(
+    to bottom left,
+    #5613ff,
+    rgba(155, 56, 254, 0.649)
+  );
+  --secondary-gradient: linear-gradient(
+    to bottom left,
+    rgba(1, 25, 185, 0.65),
+    #979dc0
+  );
+  --warning-gradient: linear-gradient(
+    to bottom left,
+    rgba(255, 107, 2, 0.736),
+    #ffd446
+  );
+  --success-gradient: linear-gradient(
+    to bottom left,
+    #388b84,
+    rgba(4, 245, 76, 0.65)
+  );
+  --danger-gradient: linear-gradient(
+    to bottom left,
+    #fb301d,
+    rgba(255, 101, 6, 0.65)
+  );
+
+  /* Font Sizes */
+  --font-10: 0.6rem;
+  --font-11: 0.6875rem;
+  --font-12: 0.75rem;
+  --font-13: 0.8125rem;
+  --font-14: 0.9875rem;
+  --font-15: 0.9375rem;
+  --font-16: 1rem;
+  --font-17: 1.0625rem;
+  --font-18: 1.125rem;
+  --font-20: 1.25rem;
+  --font-22: 1.375rem;
+  --font-25: 1.5625rem;
+  --font-30: 1.875rem;
+  --font-40: 2.5rem;
+  --font-50: 3.125rem;
+  --font-60: 3.75rem;
+  --font-70: 4.375rem;
+
+  --text-sm: 0.9rem;
+  --text-md: 1.5rem;
+  --text-lg: 2.5rem;
+  --text-xl: 3rem;
+
+  /*--------------------- Opacity-------------------- */
+
+  --opacity-0: 0;
+  --opacity-1: 0.1;
+  --opacity-2: 0.2;
+  --opacity-03: 0.3;
+  --opacity-4: 0.4;
+  --opacity-5: 0.5;
+  --opacity-6: 0.6;
+  --opacity-7: 0.7;
+  --opacity-8: 0.8;
+  --opacity-9: 0.9;
+  --opacity-10: 1;
+}
+
+/* --------------------------GENERAL CLASSES FOR ANY ELEMENT------------------------ */
+/* -----------------------------------Colors------------------------ */
+
+.primary-color {
+  color: var(--primary-color);
+}
+.secondary-color {
+  color: var(--secondary-color);
+}
+.success-color {
+  color: var(--success-color);
+}
+.warning-color {
+  color: var(--warning-color);
+}
+.danger-color {
+  color: var(--danger-color);
+}
+
+.primary-color-soft {
+  color: var(--primary-color-soft);
+}
+.secondary-color-soft {
+  color: var(--secondary-color-soft);
+}
+.success-color-soft {
+  color: var(--success-color-soft);
+}
+.warning-color-soft {
+  color: var(--warning-color-soft);
+}
+.danger-color-soft {
+  color: var(--danger-color-soft);
+}
+/* -----------------------------------Background------------------------ */
+
+.primary-bg {
+  background: var(--primary-color);
+}
+.secondary-bg {
+  background: var(--secondary-color);
+}
+.success-bg {
+  background: var(--success-color);
+}
+.warning-bg {
+  background: var(--warning-color);
+}
+.danger-bg {
+  background: var(--danger-color);
+}
+
+.primary-bg-soft {
+  background: var(--primary-color-soft);
+}
+.secondary-bg-soft {
+  background: var(--secondary-color-soft);
+}
+.success-bg-soft {
+  background: var(--success-color-soft);
+}
+.warning-bg-soft {
+  background: var(--warning-color-soft);
+}
+.danger-bg-soft {
+  background: var(--danger-color-soft);
+}
+
+/*--------------------- Opacity-------------------- */
+
+.opacity-none {
+  opacity: var(--opacity-0);
+}
+.opacity-1 {
+  opacity: var(--opacity-0);
+}
+.opacity-2 {
+  opacity: var(--opacity-2);
+}
+.opacity-0 {
+  opacity: var(--opacity-03);
+}
+.opacity-4 {
+  opacity: var(--opacity-4);
+}
+.opacity-5 {
+  opacity: var(--opacity-5);
+}
+.opacity-6 {
+  opacity: var(--opacity-6);
+}
+.opacity-7 {
+  opacity: var(--opacity-7);
+}
+.opacity-8 {
+  opacity: var(--opacity-8);
+}
+.opacity-9 {
+  opacity: var(--opacity-9);
+}
+.opacity-10 {
+  opacity: var(--opacity-10);
+}
+
+/* ------------------------Overflow--------------------- */
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-hidden-x {
+  overflow-x: hidden;
+}
+
+.overflow-hidden-y {
+  overflow-x: hidden;
+}
+
+.overflow-auto {
+  overflow: auto;
+}
+
+.overflow-scroll {
+  overflow: scroll;
+}
+
+.overflow-scroll-x {
+  overflow-x: scroll;
+}
+
+.overflow-scroll-y {
+  overflow-y: scroll;
+}
+
+/*---------------------------------- TYPOGRAPHY--------------------------------------- */
+
+/* -------------------FONT SIZE------------------------------------ */
+/* --------Text size classes----------- */
+.text-10 {
+  font-size: var(--font-10) !important;
+}
+.text-11 {
+  font-size: var(--font-11) !important;
+}
+.text-12 {
+  font-size: var(--font-12) !important;
+}
+.text-13 {
+  font-size: var(--font-13) !important;
+  font-weight: 600;
+}
+.text-14 {
+  font-size: var(--font-14) !important;
+}
+.text-15 {
+  font-size: var(--font-15) !important;
+}
+.text-16 {
+  font-size: var(--font-16) !important;
+}
+
+.text-17 {
+  font-size: var(--font-17) !important;
+}
+.text-18 {
+  font-size: var(--font-18) !important;
+}
+.text-20 {
+  font-size: var(--font-20) !important;
+}
+.text-22 {
+  font-size: var(--font-22) !important;
+}
+.text-25 {
+  font-size: var(--font-25) !important;
+}
+.text-30 {
+  font-size: var(--font-30) !important;
+}
+.text-40 {
+  font-size: var(--font-40) !important;
+}
+.text-50 {
+  font-size: var(--font-50) !important;
+}
+.text-60 {
+  font-size: var(--font-60) !important;
+}
+.text-70 {
+  font-size: var(--font-70) !important;
+}
+
+/* ---------Small text 14.4px----------------- */
+.text-sm {
+  font-size: var(--text-md) !important;
+}
+
+/* ---------Medium text  24px----------------- */
+.text-md {
+  font-size: var(--text-md) !important;
+}
+
+/* ---------Large text 40px----------------- */
+.text-lg {
+  font-size: var(--text-lg) !important;
+}
+
+/* ---------Xtra large 48px----------------- */
+.text-xl {
+  font-size: var(--text-xl) !important;
+}
+
+/*---------------- OTHER TEXT STYES------------------ */
+/* ----------Reduces the opacity of text----------- */
+.text-muted {
+  opacity: var(--opacity-8);
+}
+
+/* ----------------Centers the text-------------------------- */
+.text-center {
+  text-align: center;
+}
+
+/* ---------------------Aligns text to the left-------------- */
+.text-left {
+  text-align: left;
+}
+
+/* ---------------------Aligns text to the right-------------- */
+.text-right {
+  text-align: right;
+}
+
+/* -------------------Makes the text white---------------------- */
+.text-white,
+.text-light {
+  color: #fff !important;
+}
+
+/* Text gradient */
+.text-gradient {
+  background: radial-gradient(
+    64.18% 64.18% at 71.16% 35.69%,
+    #def9fa 0.89%,
+    #eee8ff 17.23%,
+    #d6c6ff 42.04%,
+    #ba9fff 55.12%,
+    #956cff 71.54%,
+    #b727ff 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Makes the text bold */
+.text-bold {
+  font-weight: 600;
+}
+
+/* ------------Remove default text decorations------------------ */
+.decoration-none {
+  text-decoration: none;
+}
+
+/* -------------Underline text------------------------------ */
+.underline {
+  text-decoration: underline;
+}
+
+/* -------------------Line throuth text--------------------- */
+.line-througth {
+  text-decoration: line-through;
+}
+
+/* ------------Makes text uppercase------------------- */
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* ------------Makes text lowercase------------------- */
+.lowercase {
+  text-transform: lowercase;
+}
+
+/* ------------Makes first letters of a word capitalized------------------- */
+.capitalize {
+  text-transform: capitalize;
+}
+
+/* ------------------POSITIONING AND DISPLAY-------------------- */
+
+/* ---Aligns items horizontally------------------- */
+.d-inline {
+  display: inline;
+}
+
+/* ---Aligns items horizontally maintaining the spacing befor------------------- */
+.d-inline-block {
+  display: inline-block;
+}
+
+/* ---Aligns items vertically------------------- */
+.d-block {
+  display: block;
+}
+
+/* ------------------POSITION-------------------- */
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.sticky {
+  position: sticky;
+}
+
+/* TOP */
+.top-none {
+  top: 0;
+}
+
+.top-1 {
+  top: 0.5rem;
+}
+
+.top-2 {
+  top: 1rem;
+}
+
+.top-3 {
+  top: 1.5rem;
+}
+
+.top-4 {
+  top: 2rem;
+}
+
+.top-5 {
+  top: 2.5rem;
+}
+
+.top-6 {
+  top: 3rem;
+}
+
+.top-7 {
+  top: 3.5rem;
+}
+
+.top-8 {
+  top: 4rem;
+}
+
+.top-9 {
+  top: 4.5rem;
+}
+
+.top-10 {
+  top: 10%;
+}
+.top-20 {
+  top: 20%;
+}
+.top-30 {
+  top: 30%;
+}
+.top-40 {
+  top: 40%;
+}
+.top-50 {
+  top: 50%;
+}
+.top-60 {
+  top: 60%;
+}
+.top-70 {
+  top: 70%;
+}
+.top-80 {
+  top: 80%;
+}
+.top-90 {
+  top: 90%;
+}
+.top-100 {
+  top: 100%;
+}
+
+/* RIGHT */
+.right-none {
+  right: 0;
+}
+
+.right-1 {
+  right: 0.5rem;
+}
+
+.right-2 {
+  right: 1rem;
+}
+
+.right-3 {
+  right: 1.5rem;
+}
+
+.right-4 {
+  right: 2rem;
+}
+
+.right-5 {
+  right: 2.5rem;
+}
+
+.right-6 {
+  right: 3rem;
+}
+
+.right-7 {
+  right: 3.5rem;
+}
+
+.right-8 {
+  right: 4rem;
+}
+
+.right-9 {
+  right: 4.5rem;
+}
+
+.right-10 {
+  right: 10%;
+}
+.right-20 {
+  right: 20%;
+}
+.right-30 {
+  right: 30%;
+}
+.right-40 {
+  right: 40%;
+}
+.right-50 {
+  right: 50%;
+}
+.right-60 {
+  right: 60%;
+}
+.right-70 {
+  right: 70%;
+}
+.right-80 {
+  right: 80%;
+}
+.right-90 {
+  right: 90%;
+}
+.right-100 {
+  right: 100%;
+}
+
+/* BOTTOM */
+.bottom-none {
+  bottom: 0;
+}
+
+.bottom-1 {
+  bottom: 0.5rem;
+}
+
+.bottom-2 {
+  bottom: 1rem;
+}
+
+.bottom-3 {
+  bottom: 1.5rem;
+}
+
+.bottom-4 {
+  bottom: 2rem;
+}
+
+.bottom-5 {
+  bottom: 2.5rem;
+}
+
+.bottom-6 {
+  bottom: 3rem;
+}
+
+.bottom-7 {
+  bottom: 3.5rem;
+}
+
+.bottom-8 {
+  bottom: 4rem;
+}
+
+.bottom-9 {
+  bottom: 4.5rem;
+}
+
+.bottom-10 {
+  bottom: 10%;
+}
+.bottom-20 {
+  bottom: 20%;
+}
+.bottom-30 {
+  bottom: 30%;
+}
+.bottom-40 {
+  bottom: 40%;
+}
+.bottom-50 {
+  bottom: 50%;
+}
+.bottom-60 {
+  bottom: 60%;
+}
+.bottom-70 {
+  bottom: 70%;
+}
+.bottom-80 {
+  bottom: 80%;
+}
+.bottom-90 {
+  bottom: 90%;
+}
+.bottom-100 {
+  bottom: 100%;
+}
+/* LEFT */
+.left-none {
+  left: 0;
+}
+
+.left-1 {
+  left: 0.5rem;
+}
+
+.left-2 {
+  left: 1rem;
+}
+
+.left-3 {
+  left: 1.5rem;
+}
+
+.left-4 {
+  left: 2rem;
+}
+
+.left-5 {
+  left: 2.5rem;
+}
+
+.left-6 {
+  left: 3rem;
+}
+
+.left-7 {
+  left: 3.5rem;
+}
+
+.left-8 {
+  left: 4rem;
+}
+
+.left-9 {
+  left: 4.5rem;
+}
+
+.left-10 {
+  left: 10%;
+}
+.left-20 {
+  left: 20%;
+}
+.left-30 {
+  left: 30%;
+}
+.left-40 {
+  top: 40%;
+}
+.left-50 {
+  left: 50%;
+}
+.left-60 {
+  left: 60%;
+}
+.left-70 {
+  left: 70%;
+}
+.left-80 {
+  left: 80%;
+}
+.left-90 {
+  left: 90%;
+}
+.left-100 {
+  left: 100%;
+}
+
+/* ------------------FLOATS-------------------- */
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.clear-both {
+  clear: both;
+}
+
+.clear-none {
+  clear: none;
+}
+
+.clear-initial {
+  clear: initial;
+}
+
+/* ------------------LAYOUT: GRID AND FLEXBOX-------------------- */
+
+/* -----------Creating flex containers -> Default is lays items in a row */
+.flex {
+  display: flex;
+}
+
+/* --------Aligns the flex/Grid items in a center horizontally-------------------- */
+.justify-center {
+  justify-content: center;
+}
+
+/* --------Aligns the flex items equally spaced including the edges-------------------- */
+.justify-between {
+  justify-content: space-between;
+}
+
+/* --------Aligns the flex items equally with equal spaces arounded the items-------------------- */
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+/* --------Aligns the flex/Grid items in a center vertically-------------------- */
+.align-center {
+  align-items: center;
+}
+
+/* ----------------Aligns items at the start of a container---------------- */
+.align-start {
+  align-items: start;
+}
+
+/* ----------------Aligns items at the end of a container---------------- */
+.align-end {
+  align-items: end;
+}
+
+/* -----Aligns that particular flex item at the start of the container---------------- */
+.flex-start {
+  align-self: flex-start;
+}
+
+/* -----Aligns that particular flex item at the end of the container---------------- */
+.flex-end {
+  align-self: flex-end;
+}
+
+.flex-center {
+  align-self: center;
+}
+
+/* --------------Specifies a flex item on which  space to take of the flex container--------------- */
+.flex-auto {
+  flex: auto;
+}
+.flex-1 {
+  flex: 1;
+}
+.flex-2 {
+  flex: 2;
+}
+.flex-3 {
+  flex: 3;
+}
+.flex-4 {
+  flex: 4;
+}
+.flex-5 {
+  flex: 5;
+}
+.flex-6 {
+  flex: 6;
+}
+.flex-7 {
+  flex: 7;
+}
+.flex-8 {
+  flex: 8;
+}
+.flex-9 {
+  flex: 9;
+}
+.flex-10 {
+  flex: 10;
+}
+.flex-11 {
+  flex: 11;
+}
+.flex-12 {
+  flex: 12;
+}
+
+/* General flex properties */
+.flex-center-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-align-center {
+  display: flex;
+  align-items: center;
+}
+
+.flex-justify-center {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-center-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-center-evenly {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.flex-center-around {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* -------------------Adds a gap between flex items------------- */
+.gap-1 {
+  gap: 0.5rem;
+}
+.gap-2 {
+  gap: 1rem;
+}
+.gap-3 {
+  gap: 1.5rem;
+}
+.gap-4 {
+  gap: 2rem;
+}
+.gap-5 {
+  gap: 2.5rem;
+}
+.gap-6 {
+  gap: 3rem;
+}
+.gap-7 {
+  gap: 3.5rem;
+}
+.gap-8 {
+  gap: 4rem;
+}
+.gap-9 {
+  gap: 4.5rem;
+}
+.gap-10 {
+  gap: 5rem;
+}
+
+/* ---------------Changes the direction of flex items to flow horizontally, its the default------------- */
+.flex-row {
+  flex-direction: row;
+}
+/* ---------------Changes the direction of flex items to flow vertically------------- */
+.flex-col {
+  flex-direction: column;
+}
+
+/* -------------------Makes flex items to move to the next line when the width of the flex container becomes smaller------------- */
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+/* -------------------Makes flex items not to move to the next line when the width of the flex container becomes smaller------------- */
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+/* -------------------Makes flex items toverflow its container i.e not shrink------------- */
+.flex-shrink {
+  flex-shrink: 0;
+}
+
+/* --------Used for creating grid -> Laying out content */
+.grid {
+  display: grid;
+}
+
+/* --------------Creates one column-------------------- */
+.grid-col-1 {
+  grid-template-columns: 1fr;
+}
+/* --------------Creates two columns-------------------- */
+.grid-col-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+/* --------------Creates three columns-------------------- */
+.grid-col-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+/* --------------Creates four columns-------------------- */
+.grid-col-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+/* --------------Creates five columns-------------------- */
+.grid-col-5 {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+/* --------------Creates six columns-------------------- */
+.grid-col-6 {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+/* --------------Creates seven columns-------------------- */
+.grid-col-7 {
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+/* --------------Creates eight columns-------------------- */
+.grid-col-8 {
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+}
+/* --------------Creates nine columns-------------------- */
+.grid-col-9 {
+  grid-template-columns: repeat(9, minmax(0, 1fr));
+}
+/* --------------Creates ten columns-------------------- */
+.grid-col-10 {
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+}
+/* --------------Creates eleven columns-------------------- */
+.grid-col-11 {
+  grid-template-columns: repeat(11, minmax(0, 1fr));
+}
+/* --------------Creates twelve columns-------------------- */
+.grid-col-12 {
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+/* -------------Auto columns---------------------------------- */
+.grid-col-100 {
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.grid-col-150 {
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.grid-col-200 {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.grid-col-250 {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.grid-col-300 {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.grid-col-350 {
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.grid-col-400 {
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.grid-col-450 {
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+}
+
+.grid-col-500 {
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+}
+
+.grid-col-550 {
+  grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+}
+
+.grid-col-600 {
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+}
+
+.grid-col-650 {
+  grid-template-columns: repeat(auto-fit, minmax(650px, 1fr));
+}
+
+.grid-col-700 {
+  grid-template-columns: repeat(auto-fit, minmax(700px, 1fr));
+}
+
+.grid-col-750 {
+  grid-template-columns: repeat(auto-fit, minmax(750px, 1fr));
+}
+
+.grid-col-800 {
+  grid-template-columns: repeat(auto-fit, minmax(800px, 1fr));
+}
+
+/* ----Places the grid items in the center both vertically and horizonatally */
+.place-center {
+  place-items: center;
+}
+
+/* -------------------------MARGIN AND PADDING------------------------- */
+
+/* ------------------------MARGIN---------------------------------------------- */
+
+/* ----------Equal margin on all sides--------------------------- */
+.m-1 {
+  margin: 0.5rem;
+}
+.m-2 {
+  margin: 1rem;
+}
+.m-3 {
+  margin: 1.5rem;
+}
+.m-4 {
+  margin: 2rem;
+}
+.m-5 {
+  margin: 2.5rem;
+}
+.m-6 {
+  margin: 3rem;
+}
+.m-7 {
+  margin: 3.5rem;
+}
+.m-8 {
+  margin: 4rem;
+}
+.m-9 {
+  margin: 4.5rem;
+}
+.m-10 {
+  margin: 5rem;
+}
+.m-11 {
+  margin: 5.5rem;
+}
+.m-12 {
+  margin: 6rem;
+}
+/* -----------------Equal margin on the left and right -----------------*/
+.mx-auto {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* -----------------Equal margin on the top and bottom -----------------*/
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/* --------------1rem -> 16px on either left and right--------------- */
+.mx-2 {
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+/* --------------1.5rem -> 24px on either left and right--------------- */
+.mx-3 {
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+/* --------------2rem -> 32px on either left and right--------------- */
+.mx-4 {
+  margin-right: 2rem;
+  margin-left: 2rem;
+}
+
+/* --------------2.5rem -> 40px on either left and right--------------- */
+.mx-5 {
+  margin-right: 2.5rem;
+  margin-left: 2.5rem;
+}
+
+/* --------------3rem -> 48px on either left and right--------------- */
+.mx-6 {
+  margin-right: 3rem;
+  margin-left: 3rem;
+}
+
+/* --------------1rem -> 16px on either top and bottom--------------- */
+.my-2 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* --------------1.5rem -> 24px on either top and bottom--------------- */
+.my-3 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* --------------2rem -> 32px on either top and bottom--------------- */
+.my-4 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* --------------2.5rem -> 40px on either top and bottom--------------- */
+.my-5 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+/* --------------3rem -> 48px on either top and bottom--------------- */
+.my-6 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+/* ----------Top margin--------------------------- */
+.mt-1 {
+  margin-top: 0.5rem;
+}
+.mt-2 {
+  margin-top: 1rem;
+}
+.mt-3 {
+  margin-top: 1.5rem;
+}
+.mt-4 {
+  margin-top: 2rem;
+}
+.mt-5 {
+  margin-top: 2.5rem;
+}
+.mt-6 {
+  margin-top: 3rem;
+}
+.mt-7 {
+  margin-top: 3.5rem;
+}
+.mt-8 {
+  margin-top: 4rem;
+}
+.mt-9 {
+  margin-top: 4.5rem;
+}
+.mt-10 {
+  margin-top: 5rem;
+}
+.mt-11 {
+  margin-top: 5.5rem;
+}
+.mt-12 {
+  margin-top: 6rem;
+}
+
+/* ----------Right margin--------------------------- */
+.mr-1 {
+  margin-right: 0.5rem;
+}
+.mr-2 {
+  margin-right: 1rem;
+}
+.mr-3 {
+  margin-right: 1.5rem;
+}
+.mr-4 {
+  margin-right: 2rem;
+}
+.mr-5 {
+  margin-right: 2.5rem;
+}
+.mr-6 {
+  margin-right: 3rem;
+}
+.mr-7 {
+  margin-right: 3.5rem;
+}
+.mr-8 {
+  margin-right: 4rem;
+}
+.mr-9 {
+  margin-right: 4.5rem;
+}
+.mr-10 {
+  margin-right: 5rem;
+}
+.mr-11 {
+  margin-right: 5.5rem;
+}
+.mr-12 {
+  margin-right: 6rem;
+}
+
+/* ----------Bottom margin--------------------------- */
+.mb-1 {
+  margin-bottom: 0.5rem;
+}
+.mb-2 {
+  margin-bottom: 1rem;
+}
+.mb-3 {
+  margin-bottom: 1.5rem;
+}
+.mb-4 {
+  margin-bottom: 2rem;
+}
+.mb-5 {
+  margin-bottom: 2.5rem;
+}
+.mb-6 {
+  margin-bottom: 3rem;
+}
+.mb-7 {
+  margin-bottom: 3.5rem;
+}
+.mb-8 {
+  margin-bottom: 4rem;
+}
+.mb-9 {
+  margin-bottom: 4.5rem;
+}
+.mb-10 {
+  margin-bottom: 5rem;
+}
+.mb-11 {
+  margin-bottom: 5.5rem;
+}
+.mb-12 {
+  margin-bottom: 6rem;
+}
+
+/* ----------Left margin--------------------------- */
+.ml-1 {
+  margin-left: 0.5rem;
+}
+.ml-2 {
+  margin-left: 1rem;
+}
+.ml-3 {
+  margin-left: 1.5rem;
+}
+.ml-4 {
+  margin-left: 2rem;
+}
+.ml-5 {
+  margin-left: 2.5rem;
+}
+.ml-6 {
+  margin-left: 3rem;
+}
+.ml-7 {
+  margin-left: 3.5rem;
+}
+.ml-8 {
+  margin-left: 4rem;
+}
+.ml-9 {
+  margin-left: 4.5rem;
+}
+.ml-10 {
+  margin-left: 5rem;
+}
+.ml-11 {
+  margin-left: 5.5rem;
+}
+.ml-12 {
+  margin-left: 6rem;
+}
+
+/* ------------------------PADDING---------------------------------------------- */
+/* ----------Equal padding on all sides--------------------------- */
+.p-1 {
+  padding: 0.5rem;
+}
+.p-2 {
+  padding: 1rem;
+}
+.p-3 {
+  padding: 1.5rem;
+}
+.p-4 {
+  padding: 2rem;
+}
+.p-5 {
+  padding: 2.5rem;
+}
+.p-6 {
+  padding: 3rem;
+}
+.p-7 {
+  padding: 3.5rem;
+}
+.p-8 {
+  padding: 4rem;
+}
+.p-9 {
+  padding: 4.5rem;
+}
+.p-10 {
+  padding: 5rem;
+}
+.p-11 {
+  padding: 5.5rem;
+}
+.p-12 {
+  padding: 6rem;
+}
+
+/* -----------------Equal padding on the left and right -----------------*/
+.px-auto {
+  padding-right: auto;
+  padding-left: auto;
+}
+
+/* -----------------Equal padding on the top and bottom -----------------*/
+.py-auto {
+  padding-top: auto;
+  padding-bottom: auto;
+}
+
+/* --------------1rem -> 16px on either left and right--------------- */
+.px-2 {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+/* --------------1.5rem -> 24px on either left and right--------------- */
+.px-3 {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+/* --------------2rem -> 32px on either left and right--------------- */
+.px-4 {
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+/* --------------2.5rem -> 40px on either left and right--------------- */
+.px-5 {
+  padding-right: 2.5rem;
+  padding-left: 2.5rem;
+}
+
+/* --------------3rem -> 48px on either left and right--------------- */
+.px-6 {
+  padding-right: 3rem;
+  padding-left: 3rem;
+}
+
+/* --------------1rem -> 16px on either top and bottom--------------- */
+.py-2 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* --------------1.5rem -> 24px on either top and bottom--------------- */
+.py-3 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+/* --------------2rem -> 32px on either top and bottom--------------- */
+.py-4 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* --------------2.5rem -> 40px on either top and bottom--------------- */
+.py-5 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+/* --------------3rem -> 48px on either top and bottom--------------- */
+.py-6 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* ----------Top padding--------------------------- */
+.pt-1 {
+  padding-top: 0.5rem;
+}
+.pt-2 {
+  padding-top: 1rem;
+}
+.pt-3 {
+  padding-top: 1.5rem;
+}
+.pt-4 {
+  padding-top: 2rem;
+}
+.pt-5 {
+  padding-top: 2.5rem;
+}
+.pt-6 {
+  padding-top: 3rem;
+}
+.pt-7 {
+  padding-top: 3.5rem;
+}
+.pt-8 {
+  padding-top: 4rem;
+}
+.pt-9 {
+  padding-top: 4.5rem;
+}
+.pt-10 {
+  padding-top: 5rem;
+}
+.pt-11 {
+  padding-top: 5.5rem;
+}
+.pt-12 {
+  padding-top: 6rem;
+}
+
+/* ----------Right padding--------------------------- */
+.pr-1 {
+  padding-right: 0.5rem;
+}
+.pr-2 {
+  padding-right: 1rem;
+}
+.pr-3 {
+  padding-right: 1.5rem;
+}
+.pr-4 {
+  padding-right: 2rem;
+}
+.pr-5 {
+  padding-right: 2.5rem;
+}
+.pr-6 {
+  padding-right: 3rem;
+}
+.pr-7 {
+  padding-right: 3.5rem;
+}
+.pr-8 {
+  padding-right: 4rem;
+}
+.pr-9 {
+  padding-right: 4.5rem;
+}
+.pr-10 {
+  padding-right: 5rem;
+}
+.pr-11 {
+  padding-right: 5.5rem;
+}
+.pr-12 {
+  padding-right: 6rem;
+}
+
+/* ----------Bottom padding--------------------------- */
+.pb-1 {
+  padding-bottom: 0.5rem;
+}
+.pb-2 {
+  padding-bottom: 1rem;
+}
+.pb-3 {
+  padding-bottom: 1.5rem;
+}
+.pb-4 {
+  padding-bottom: 2rem;
+}
+.pb-5 {
+  padding-bottom: 2.5rem;
+}
+.pb-6 {
+  padding-bottom: 3rem;
+}
+.pb-7 {
+  padding-bottom: 3.5rem;
+}
+.pb-8 {
+  padding-bottom: 4rem;
+}
+.pb-9 {
+  padding-bottom: 4.5rem;
+}
+.pb-10 {
+  padding-bottom: 5rem;
+}
+.pb-11 {
+  padding-bottom: 5.5rem;
+}
+.pb-12 {
+  padding-bottom: 6rem;
+}
+
+/* ----------Left padding--------------------------- */
+.pl-1 {
+  padding-left: 0.5rem;
+}
+.pl-2 {
+  padding-left: 1rem;
+}
+.pl-3 {
+  padding-left: 1.5rem;
+}
+.pl-4 {
+  padding-left: 2rem;
+}
+.pl-5 {
+  padding-left: 2.5rem;
+}
+.pl-6 {
+  padding-left: 3rem;
+}
+.pl-7 {
+  padding-left: 3.5rem;
+}
+.pl-8 {
+  padding-left: 4rem;
+}
+.pl-9 {
+  padding-left: 4.5rem;
+}
+.pl-10 {
+  padding-left: 5rem;
+}
+.pl-11 {
+  padding-left: 5.5rem;
+}
+.pl-12 {
+  padding-left: 6rem;
+}
+
+/* ------------------------WIDTH---------------------------------- */
+.w-fit-content {
+  width: fit-content;
+}
+
+.vw-100 {
+  width: 100vw;
+}
+
+.w-100 {
+  width: 100%;
+}
+.w-95 {
+  width: 95%;
+}
+.w-90 {
+  width: 90%;
+}
+.w-85 {
+  width: 85%;
+}
+.w-80 {
+  width: 80%;
+}
+.w-75 {
+  width: 75%;
+}
+.w-70 {
+  width: 70%;
+}
+.w-60 {
+  width: 60%;
+}
+.w-50 {
+  width: 50%;
+}
+.w-40 {
+  width: 40%;
+}
+.w-30 {
+  width: 30%;
+}
+.w-20 {
+  width: 20%;
+}
+.w-10 {
+  width: 10%;
+}
+.w-5 {
+  width: 5%;
+}
+
+.max-w-100 {
+  max-width: 100px;
+}
+.max-w-150 {
+  max-width: 150px;
+}
+.max-w-200 {
+  max-width: 200px;
+}
+.max-w-250 {
+  max-width: 250px;
+}
+.max-w-300 {
+  max-width: 300px;
+}
+.max-w-350 {
+  max-width: 350px;
+}
+.max-w-400 {
+  max-width: 400px;
+}
+.max-w-450 {
+  max-width: 450px;
+}
+.max-w-500 {
+  max-width: 500px;
+}
+.max-w-550 {
+  max-width: 550px;
+}
+.max-w-600 {
+  max-width: 600px;
+}
+.max-w-650 {
+  max-width: 650px;
+}
+.max-w-700 {
+  max-width: 700px;
+}
+.max-w-750 {
+  max-width: 750px;
+}
+.max-w-800 {
+  max-width: 800px;
+}
+
+/* ------------------------HEIGHT---------------------------------- */
+.h-fit-content {
+  height: fit-content;
+}
+
+.vh-100 {
+  height: 100vh;
+}
+
+.h-100 {
+  height: 100%;
+}
+.h-90 {
+  height: 90%;
+}
+.h-80 {
+  height: 80%;
+}
+.h-70 {
+  height: 70%;
+}
+.h-60 {
+  height: 60%;
+}
+.h-50 {
+  height: 50%;
+}
+.h-40 {
+  height: 40%;
+}
+.h-30 {
+  height: 30%;
+}
+.h-20 {
+  height: 20%;
+}
+.h-10 {
+  height: 10%;
+}
+.h-5 {
+  width: 5%;
+}
+
+.height-50 {
+  height: 50px;
+}
+.height-100 {
+  height: 100px;
+}
+.height-150 {
+  height: 150px;
+}
+.height-200 {
+  height: 200px;
+}
+.height-250 {
+  height: 250px;
+}
+.height-300 {
+  height: 300px;
+}
+.height-350 {
+  height: 350px;
+}
+.height-400 {
+  height: 400px;
+}
+.height-450 {
+  height: 450px;
+}
+.height-500 {
+  height: 500px;
+}
+.height-550 {
+  height: 550px;
+}
+.height-600 {
+  height: 600px;
+}
+
+/* ------------------------BORDERS------------------------------- */
+.border {
+  border: 1px solid #878e98;
+}
+
+.border-2 {
+  border: 2px solid #878e98;
+}
+
+.border-3 {
+  border: 3px solid #878e98;
+}
+
+.border-4 {
+  border: 4px solid #878e98;
+}
+
+.border-5 {
+  border: 5px solid #878e98;
+}
+
+.border-6 {
+  border: 6px solid #878e98;
+}
+
+.border-top {
+  border-top: 1px solid #878e98;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #878e98;
+}
+
+.border-left {
+  border-left: 1px solid #878e98;
+}
+
+.border-right {
+  border-right: 1px solid #878e98;
+}
+
+.border-top-2 {
+  border-top: 2px solid #878e98;
+}
+
+.border-bottom-2 {
+  border-bottom: 2px solid #878e98;
+}
+
+.border-left-2 {
+  border-left: 2px solid #878e98;
+}
+
+.border-right-2 {
+  border-right: 1px solid #878e98;
+}
+
+.border-top-3 {
+  border-top: 3px solid #878e98;
+}
+
+.border-bottom-3 {
+  border-bottom: 3px solid #878e98;
+}
+
+.border-left-3 {
+  border-left: 3px solid #878e98;
+}
+
+.border-right-3 {
+  border-right: 3px solid #878e98;
+}
+
+.border-top-4 {
+  border-top: 4px solid #878e98;
+}
+
+.border-bottom-4 {
+  border-bottom: 4px solid #878e98;
+}
+
+.border-left-4 {
+  border-left: 4px solid #878e98;
+}
+
+.border-right-4 {
+  border-right: 4px solid #878e98;
+}
+
+.border-primary {
+  border-color: var(--primary-color);
+}
+
+.border-secondary {
+  border-color: var(--secondary-color);
+}
+
+.border-success {
+  border-color: var(--success-color);
+}
+
+.border-warning {
+  border-color: var(--warning-color);
+}
+
+.border-danger {
+  border-color: var(--danger-color);
+}
+
+/* ---------------------------SHADOWS---------------------------- */
+.shadow-xs {
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.shadow-sm {
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
+}
+
+.shadow {
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);
+}
+.shadow-md {
+  box-shadow: 6px 6px 30px rgba(0, 0, 0, 0.25);
+}
+.shadow-lg {
+  box-shadow: 8px 8px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* --------------------------BORDER RADIUS------------------------------ */
+.rounded-sm {
+  border-radius: 0.4rem;
+}
+.rounded {
+  border-radius: 0.8rem;
+}
+
+.rounded-md {
+  border-radius: 1.5rem;
+}
+.rounded-lg {
+  border-radius: 2rem;
+}
+
+/* ----------------rounds an element into a circle--------------------------- */
+.rounded-full {
+  border-radius: 50%;
+}
+
+/* -----------------------------CONTAINERS----------------------------------------------- */
+/* -----------------Gives an element a width of 98% and centers it */
+.container-fluid {
+  width: 98%;
+  margin: auto;
+}
+/* -----------------Gives an element a width of 85% and centers it */
+.container {
+  width: 85%;
+  margin: auto;
+}
+
+/* -------------------------------------------------------BUTTTONS--------------------------------------------------- */
+.btn,
+a.btn,
+input.btn {
+  border: none;
+  outline: none;
+  display: block;
+  font-family: inherit;
+  cursor: pointer;
+  color: #232531;
+  padding: 0.4rem 1rem;
+  background-color: #9ba6b7;
+  font-size: var(--font-14);
+}
+
+a.btn {
+  text-decoration: none;
+}
+
+.btn-rounded,
+a.btn-rounded,
+input.btn-rounded {
+  border-radius: 1.2rem;
+}
+
+.btn-primary,
+a.btn-primary,
+input.btn-primary {
+  background-color: var(--primary-color);
+  color: #eadefb;
+}
+
+.btn-secondary,
+a.btn-secondary,
+input.btn-secondary {
+  background-color: var(--secondary-color);
+  color: #eaedff;
+}
+
+.btn-warning,
+a.btn-warning,
+input.btn-warning {
+  background-color: var(--warning-color);
+  color: #fffae9;
+}
+
+.btn-success,
+a.btn-success,
+input.btn-success {
+  background-color: var(--success-color);
+  color: #f0fffe;
+}
+
+.btn-danger,
+a.btn-danger,
+input.btn-danger {
+  background-color: var(--danger-color);
+  color: #ffecea;
+}
+
+.btn-primary-soft,
+a.btn-primary-soft,
+input.btn-primary-soft {
+  background-color: var(--primary-color-soft);
+  color: var(--primary-color);
+}
+
+.btn-secondary-soft,
+a.btn-secondary-soft,
+input.btn-secondary-soft {
+  background-color: var(--secondary-color-soft);
+  color: var(--secondary-color);
+}
+
+.btn-warning-soft,
+a.btn-warning-soft,
+input.btn-warning-soft {
+  background-color: var(--warning-color-soft);
+  color: var(--warning-color);
+}
+
+.btn-success-soft,
+a.btn-success-soft,
+input.btn-success-soft {
+  background-color: var(--success-color-soft);
+  color: var(--success-color);
+}
+
+.btn-danger-soft,
+a.btn-danger-soft,
+input.btn-danger-soft {
+  background-color: var(--danger-color-soft);
+  color: var(--danger-color);
+}
+
+.btn-primary-gradient,
+a.btn-primary-gradient,
+input.btn-primary-gradient {
+  background: var(--primary-gradient);
+  color: #eadefb;
+}
+
+.btn-secondary-gradient,
+a.btn-secondary-gradient,
+input.btn-secondary-gradient {
+  background: var(--secondary-gradient);
+  color: #eaedff;
+}
+
+.btn-warning-gradient,
+a.btn-warning-gradient,
+input.btn-warning-gradient {
+  background: var(--warning-gradient);
+  color: #fffae9;
+}
+
+.btn-success-gradient,
+a.btn-success-gradient,
+input.btn-success-gradient {
+  background: var(--success-gradient);
+  color: #f0fffe;
+}
+
+.btn-danger-gradient,
+a.btn-danger-gradient,
+input.btn-danger-gradient {
+  background: var(--danger-gradient);
+  color: #ffecea;
+}
+
+.btn-primary-outlined,
+a.btn-primary-outlined,
+input.btn-primary-outlined {
+  border: 1px solid var(--primary-color);
+  background: transparent;
+  color: var(--primary-color);
+}
+
+.btn-secondary-outlined,
+a.btn-secondary-outlined,
+input.btn-secondary-outlined {
+  border: 1px solid var(--secondary-color);
+  background: transparent;
+  color: var(--secondary-color);
+}
+
+.btn-warning-outlined,
+a.btn-warning-outlined,
+input.btn-warning-outlined {
+  border: 1px solid var(--warning-color);
+  background: transparent;
+  color: var(--warning-color);
+}
+
+.btn-success-outlined,
+a.btn-success-outlined,
+input.btn-success-outlined {
+  border: 1px solid var(--success-color);
+  background: transparent;
+  color: var(--success-color);
+}
+
+.btn-danger-outlined,
+a.btn-danger-outlined,
+input.btn-danger-outlined {
+  border: 1px solid var(--danger-color);
+  background: transparent;
+  color: var(--danger-color);
+}
+
+.btn-circle,
+a.btn-circle,
+input.btn-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-circle-sm,
+a.btn-circle-sm,
+input.btn-circle-sm {
+  width: 30px;
+  height: 30px;
+}
+
+.btn-circle-md,
+a.btn-circle-md,
+input.btn-circle-md {
+  width: 50px;
+  height: 50px;
+}
+
+.btn-circle-lg,
+a.btn-circle-lg,
+input.btn-circle-lg {
+  width: 65px;
+  height: 65px;
+}
+
+.btn-circle-xl,
+a.btn-circle-xl,
+input.btn-circle-xl {
+  width: 75px;
+  height: 75px;
+}
+
+/* -------------------------------------------------------FORM INPUT FIELDS--------------------------------------------------- */
+
+input,
+textarea,
+select {
+  background-color: #fff;
+  color: inherit;
+  outline: none;
+}
+
+.form-control {
+  border: 1px solid rgb(174, 200, 206);
+  outline: none;
+  border-radius: 0.5rem;
+  font-family: inherit;
+  padding: 0.35rem 0.5rem;
+  display: block;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.form-control:focus {
+  border: 1px solid rgb(83, 182, 247);
+}
+
+.form-control-sm {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.9rem;
+}
+
+.form-control-md {
+  padding: 0.4rem 0.5rem;
+  font-size: 1.1rem;
+}
+
+.form-control-lg {
+  padding: 0.6rem 0.5rem;
+  font-size: 1.2rem;
+}
+
+.input-with-icon {
+  border: 1px solid rgb(174, 200, 206);
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 0.5rem;
+  background-color: #d6d8f0;
+  overflow: hidden;
+}
+
+.input-with-icon .form-control {
+  border: none;
+  border-radius: 0px;
+}
+
+.form-input.with-bg {
+  background-color: #d6d8f0;
+}
+
+.input-with-icon i {
+  padding: 0 0.5rem;
+}
+
+.input-with-icon.transparent {
+  background-color: transparent;
+}
+
+.input-check,
+.input-radio {
+  display: flex;
+  align-items: center;
+}
+
+.input-check label,
+.input-radio label {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  user-select: none;
+}
+
+.input-check input[type="checkbox"],
+.input-radio input[type="radio"] {
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+}
+
+.input-check label::before {
+  content: "";
+  width: 1.3rem;
+  height: 1.3rem;
+  color: var(--primary-color);
+  margin-right: 0.4rem;
+  border-radius: 0.1rem;
+  border: 1px solid #979dc0;
+}
+
+.input-check input[type="checkbox"]:checked + label::before {
+  content: "\002714";
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-size: var(--font-11);
+  background: #979dc0;
+}
+
+.input-check input[type="checkbox"].check-primary ~ label::before,
+.input-radio input[type="radio"].radio-primary ~ label::before {
+  border: 1px solid var(--primary-color);
+}
+
+.input-check input[type="checkbox"].check-primary:checked + label::before,
+.input-radio input[type="radio"].radio-primary ~ label::after {
+  background: var(--primary-color);
+}
+
+.input-check input[type="checkbox"].check-secondary ~ label::before,
+.input-radio input[type="radio"].radio-secondary ~ label::before {
+  border: 1px solid var(--secondary-color);
+}
+
+.input-check input[type="checkbox"].check-secondary:checked + label::before,
+.input-radio input[type="radio"].radio-secondary ~ label::after {
+  background: var(--secondary-color);
+}
+
+.input-check input[type="checkbox"].check-warning ~ label::before,
+.input-radio input[type="radio"].radio-warning ~ label::before {
+  border: 1px solid var(--warning-color);
+}
+
+.input-check input[type="checkbox"].check-warning:checked + label::before,
+.input-radio input[type="radio"].radio-warning ~ label::after {
+  background: var(--warning-color);
+}
+
+.input-check input[type="checkbox"].check-success ~ label::before,
+.input-radio input[type="radio"].radio-success ~ label::before {
+  border: 1px solid var(--success-color);
+}
+
+.input-check input[type="checkbox"].check-success:checked + label::before,
+.input-radio input[type="radio"].radio-success ~ label::after {
+  background: var(--success-color);
+}
+
+.input-check input[type="checkbox"].check-danger ~ label::before,
+.input-radio input[type="radio"].radio-danger ~ label::before {
+  border: 1px solid var(--danger-color);
+}
+
+.input-check input[type="checkbox"].check-danger:checked + label::before,
+.input-radio input[type="radio"].radio-danger ~ label::after {
+  background: var(--danger-color);
+}
+
+.input-radio label::before {
+  content: "";
+  width: 1.2rem;
+  height: 1.2rem;
+  color: var(--primary-color);
+  margin-right: 0.4rem;
+  border-radius: 50%;
+  border: 1px solid #979dc0;
+}
+
+.input-radio label::after {
+  position: absolute;
+  content: "";
+  width: 0.6rem;
+  height: 0.6rem;
+  margin-left: 0.2855em;
+  margin-top: -0.06rem;
+  border-radius: 50%;
+  background: #979dc0;
+  transform: scale(0);
+  transition: transform 0.2s ease-in-out;
+}
+
+.input-radio input[type="radio"]:checked + label::after {
+  transform: scale(1);
+}
+
+/* --------------------------TABLE------------------------------------------- */
+
+.table {
+  border-collapse: collapse;
+  color: #717382;
+  width: 100%;
+  border-radius: 0.5rem;
+  /* overflow: hidden; */
+}
+
+.border-around {
+  border: 1px solid #e3e6f0;
+}
+
+.table tr {
+  display: table-row;
+}
+
+.table td {
+  padding: 0.5rem 0.4rem;
+  text-align: left;
+  border-top: 1px solid #d6dcee;
+}
+
+.table th {
+  padding: 0.5rem 0.4rem;
+  text-align: left;
+  font-weight: 700 !important;
+}
+
+table.table.table-striped tbody tr:nth-child(odd) {
+  background-color: #eff3ff;
+}
+
+table.table.table-striped td {
+  border: none !important;
+}
+
+.table-bordered th,
+.table-bordered td {
+  border: 1px solid #d6dcee;
+}
+
+.table-borderless td,
+.table-borderless th {
+  border: 0;
+}
+
+.table-borderless-with-top td {
+  border: 0;
+}
+
+.table-hoverable tbody tr:hover {
+  color: #858796;
+  background-color: #eff3ff;
+  cursor: pointer;
+}
+
+.table-dark {
+  color: #fff;
+  background-color: #232531;
+}
+
+.table-dark td {
+  border-top: 1px solid rgb(74, 83, 89) !important;
+}
+
+.table-dark thead {
+  background-color: #171922;
+}
+
+.table-dark-bordered td {
+  border: 1px solid rgb(74, 83, 89) !important;
+}
+
+.table-dark.table-borderless {
+  border: 0 !important;
+}
+
+.table-dark-striped td {
+  border: none !important;
+}
+
+.table-dark-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.table-dark.table-hoverable tbody tr:hover {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.075);
+}
+
+/* -------------------------IMAGES---------------------------- */
+.image {
+  width: 100%;
+}
+
+.profile-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+.profile-avatar-sm {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.profile-avatar-md {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.profile-avatar-lg {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.profile-avatar-xl {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+/* --------------BACKGROUND----------------------- */
+.bg-white,
+.bg-light {
+  background-color: #fff;
+}
+
+.object-cover {
+  object-fit: cover;
+}
+
+.bg-cover {
+  background-size: cover;
+}
+
+.bg-no-repeat {
+  background-repeat: no-repeat;
+}
+
+/* ---------------------------------------------CUSTOM COMPONENTS---------------------------------------------------- */
+/* ---------------BADGES--------------------- */
+.badge {
+  background-color: #707389;
+  padding: 0.1rem 0.4rem;
+  border-radius: 0.5rem;
+  font-size: var(--font-12);
+  color: #fff;
+}
+
+.badge.badge-primary {
+  background-color: var(--primary-color);
+}
+.badge.badge-secondary {
+  background-color: var(--secondary-color);
+}
+.badge.badge-success {
+  background-color: var(--success-color);
+}
+.badge.badge-warning {
+  background-color: var(--warning-color);
+}
+.badge.badge-danger {
+  background-color: var(--danger-color);
+}
+
+/* ---------------PROGRESS BAR--------------------- */
+.progress-bar {
+  margin: 0.8rem 0;
+  position: relative;
+  width: 100%;
+  height: 6px;
+  border-radius: 0.3rem;
+  background-color: #c4c7dd;
+}
+
+.progress {
+  height: 100%;
+  background-color: #64656f;
+  border-radius: 0.3rem;
+}
+
+.progress-bar-primary .progress {
+  background-color: var(--primary-color);
+}
+.progress-bar-secondary .progress {
+  background-color: var(--secondary-color);
+}
+.progress-bar-success .progress {
+  background-color: var(--success-color);
+}
+.progress-bar-warning .progress {
+  background-color: var(--warning-color);
+}
+.progress-bar-danger .progress {
+  background-color: var(--danger-color);
+}
+
+.progress-bar .label {
+  position: absolute;
+  bottom: 100%;
+  margin-bottom: 0.3rem;
+  width: 25px;
+  height: 25px;
+  font-size: 0.5rem;
+  background-color: #64656f;
+  color: #fff;
+  border-radius: 150px 150px 0 150px;
+  transform: rotate(45deg);
+  display: grid;
+  place-items: center;
+}
+
+.progress-bar .label span {
+  transform: rotate(-45deg);
+}
+
+.progress-bar .label.primary {
+  background-color: var(--primary-color);
+}
+
+.progress-bar .label.secondary {
+  background-color: var(--secondary-color);
+}
+
+.progress-bar .label.success {
+  background-color: var(--success-color);
+}
+
+.progress-bar .label.warning {
+  background-color: var(--warning-color);
+}
+
+.progress-bar .label.danger {
+  background-color: var(--danger-color);
+}
+
+/* --------------- LIST GROUP--------------------- */
+
+ul.list-group {
+  border: 1px solid #a3a6b9;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+ul.list-group li.list-group-item {
+  list-style: none;
+  padding: 0.4rem 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+ul.list-group li.list-group-item:not(:first-child) {
+  border-top: 1px solid #a4a7ba;
+}
+
+ul.list-group li.list-group-item.active {
+  background-color: var(--primary-color);
+  color: #f2f3ff;
+}
+
+ul.list-group.with-badge li.list-group-item {
+  justify-content: space-between !important;
+  padding: 0.4rem 1rem !important;
+}
+
+/* -------------------------PAGINATION---------------------- */
+ul.pagination {
+  display: flex;
+  border: 1px solid rgb(177, 177, 177);
+  width: fit-content;
+  border-radius: 0.4rem;
+}
+
+ul.pagination li {
+  list-style: none;
+  width: 40px;
+  display: grid;
+  place-items: center;
+}
+
+ul.pagination li:not(:last-child) {
+  border-right: 1px solid rgb(177, 177, 177);
+}
+
+ul.pagination li a {
+  color: #464850;
+}
+
+.pagination li:first-child,
+.pagination li:last-child {
+  width: 80px;
+}
+
+ul.pagination li.active {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+ul.pagination li.active a {
+  color: var(--light-color);
+}
+
+.pagination li a {
+  text-decoration: none;
+  padding: 0.4rem;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+ul.pagination.no-border,
+ul.pagination.no-border li {
+  border: none;
+}
+
+ul.pagination.no-border {
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
+}
+
+ul.pagination.no-border li {
+  border-radius: 0.3rem;
+}
+
+ul.pagination.no-border li a {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------------------------------TABS COMPONET--------------------- */
+.tab-wrapper {
+  padding: 1rem;
+}
+
+.tab-wrapper .tab-links button.tab-btn {
+  width: 100%;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid var(--primary-color);
+  background-color: transparent;
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+  font-size: var(--font-14);
+}
+
+.tab-wrapper .tab-links button.active {
+  border-bottom: none;
+  border-top: 1px solid var(--primary-color);
+  border-left: 1px solid var(--primary-color);
+  border-right: 1px solid var(--primary-color);
+}
+
+.tab-wrapper .tab-panels,
+.tab-panels1 {
+  margin-top: 1rem;
+}
+
+.tab-wrapper .tab-panels .tab-panel {
+  display: none;
+}
+
+.tab-wrapper .tab-panels .tab-panel.active {
+  display: grid;
+}
+
+.tab-wrapper .tab-links button.tab-btn1 {
+  width: 100%;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+  font-size: var(--font-14);
+}
+
+.tab-indicator {
+  position: relative;
+  height: 2px;
+  background: var(--primary-color);
+  left: 0;
+  top: 0.2rem;
+  transition: left 0.3s ease-in-out;
+}
+
+.tab-wrapper .tab-panels1 .tab-panel1 {
+  display: none;
+}
+
+.tab-wrapper .tab-panels1 .tab-panel1.active {
+  display: grid;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.4s ease-in 1 forwards;
+}
+
+/* ------------------------------------------MODAL----------------------- */
+
+.modal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.modal-dialog {
+  max-width: 400px;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+  transform: translateY(-500px);
+  transition: all 0.3s ease-in-out;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem 1rem;
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.modal-header i {
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.modal-body {
+  padding: 1rem;
+}
+
+.modal-footer {
+  padding: .5rem;
+  text-align: right;
+}
+
+.modal-footer > button {
+  margin-right: 0.6rem;
+}
+
+.open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}

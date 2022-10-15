@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add to Cart</title>
+
+    <!-- CSS CLASSES AND UTILITIES -->
+    <link rel="stylesheet" href="assets/css/simplified.css">
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- FEATHER ICONS -->
+    <link rel="stylesheet" href="assets/feather-icons/feather.css">
+
+    <!-- FONTAWESOME ICONS -->
+    <link rel="stylesheet" href="../fontawesome-free/css/all.css">
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="assets/images/logo3.jpg" type="image/x-icon">
+</head>
+<body>
+    <header class="fixed w-100 top-none left-none grid">
+        <div class="contacts flex-center-between gap-2 w-90 mx-auto">
+            <div class="phone-address flex-align-center gap-2">
+                <div class="address">
+                    <a href="https://www.google-maps.com"><i class="feather-map-pin"></i> <span>Kampala, Luwumu Street,
+                            Plot 202</span></a>
+                </div>
+                <div class="phone">
+                    <a href="tel:+256775358738"><i class="feather-phone"></i> <span>+256775358738</span></a>
+                </div>
+            </div>
+            <div class="flex-align-center gap-2">
+                <a href="https://www.facebook.com"><i class="feather-facebook"></i></a>
+                <a href="https://www.twitter.com"><i class="feather-twitter"></i></a>
+                <a href="https://www.instagram.com"><i class="feather-instagram"></i></a>
+                <a href="https://www.linkedin.com"><i class="feather-linkedin"></i></a>
+            </div>
+        </div>
+        <hr>
+        <div class="flex-center-between gap-2 w-90 mx-auto mt-1">
+            <a href="index.html" class="flex-align-center gap-1">
+                <i class="feather-shopping-cart text-25"></i>
+                <h1>Shop<span class="warning-color">wb</span></h1>
+            </a>
+            <div class="flex-align-center gap-2">
+                <div class="input-with-icon">
+                    <i class="feather-search"></i>
+                    <input type="search" name="" id="" class="form-control" placeholder="Search for products...">
+                </div>
+                <div class="cart-icon relative launch-btn cursor-pointer">
+                    <i class="feather-shopping-cart text-20 text-muted"></i>
+                    <span class="count warning-bg text-12 absolute"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="banner max-w-500 mx-auto w-100 height-350 mt-10 text-center relative">
+        <h1 class="text-40">Shop all your favorite products at <span class="warning-color">Shopwb</span></h1>
+        <p class="text-14 text-muted">We deliver all the quality products across any location at friendly prices and
+            massive discounts.</p>
+        <img src="assets/images/DrawKit-onlineshopping-Illustration-08.svg" alt="" class="image height-200">
+    </div>
+
+    <!-- ALL PRODUCTS -->
+    <div class="products">
+        <h1 class="heading">products</h1>
+        <div class="filter-btns flex-justify-center gap-2 mt-4">
+            <!-- FITER BUTTONS GO HERE -->
+        </div>
+        <div class="container product-grid grid grid-col-250 gap-2">
+            <!-- PRODUCTS GO HERE -->
+        </div>
+    </div>
+
+    <!-- CART MODAL -->
+    <div class="cart-modal">
+        <div class="cart-dialog p-2 relative">
+            <div class="flex-center-between px-2">
+                <div class="close-icon cursor-pointer"><i class="feather-arrow-left"></i></div>
+                <h1 class="text-muted text-18">Subtotal: <span class="text-25 warning-color subtotal">$00.00</span></h1>
+            </div>
+            <!-- SHOWS WHEN THERE ARE NO ITEMS IN THE CART  -->
+
+
+            <!-- CART ITEM LIST -->
+            <div class="cart-items-list">
+                <!-- CART ITEMS -->
+            </div>
+
+            <!-- Clear Cart Items -->
+            <div class="clear-all absolute bottom-none border-top w-100 left-none px-2 pt-1 pb-1" hidden>
+                <button class="btn btn-warning rounded-sm mx-auto" id="clearCart">Clear Cart</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- CUSTOM SCRIPTS -->
+    <script src="assets/js/products.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
